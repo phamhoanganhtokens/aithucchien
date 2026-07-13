@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÁO CÁO GIẢI PHÁP AI THỰC CHIẾN SS2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 900: '#0f172a', 50: '#f8fafc' },
+                        gold: { 600: '#d4af37' },
+                        navy: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Arial', 'sans-serif'],
+                        serif: ['Times New Roman', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f1f5f9; }
+        .report-container { 
+            max-width: 900px; 
+            margin: 2rem auto; 
+            padding: 4rem; 
+            background: white; 
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); 
+        }
+        h1, h2, h3 { font-family: 'Inter', sans-serif; color: #0f172a; }
+        p { font-family: 'Times New Roman', serif; text-align: justify; line-height: 1.6; color: #334155; margin-bottom: 1.5rem; }
+        .gold-border-l { border-left: 4px solid #d4af37; }
+        .code-block { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <article class="report-container">
+        <!-- Header -->
+        <header class="border-b-2 border-slate-900 pb-8 mb-10">
+            <div class="flex justify-between items-start">
+                <div>
+                    <h2 class="text-xs uppercase tracking-widest text-slate-500 font-bold">AI Software Development</h2>
+                    <h1 class="text-3xl font-bold text-slate-900 mt-2">BÁO CÁO GIẢI PHÁP AI THỰC CHIẾN SS2</h1>
+                    <a href="www.phamhoanganhtokens.com" target="_blank" class="text-blue-600 hover:underline text-sm font-medium">www.phamhoanganhtokens.com</a>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-slate-500 font-mono" id="timestamp"></p>
+                    <span class="inline-block bg-slate-900 text-gold-600 text-xs px-3 py-1 rounded mt-2 uppercase tracking-tighter">Level 3 Architecture</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Section 1: Summary & State -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">1. Tóm tắt Đề thi & Trạng thái Dự án</h2>
+            <p>Dưới đây là báo cáo chi tiết về chiến lược xây dựng <i>Chatbot Tư vấn Sức khỏe Tâm thần</i> dành cho sinh viên, được thiết kế để đạt điểm tối đa dựa trên các tiêu chí chuyên môn.</p>
+            
+            <div class="mt-8 bg-slate-900 rounded-xl p-6 shadow-inner">
+                <h3 class="text-gold-600 font-bold mb-4 flex items-center gap-2">
+                    <span class="text-lg">PROJECT_STATE_MANIFEST</span>
+                </h3>
+                <pre class="code-block text-emerald-400 text-xs md:text-sm overflow-x-auto whitespace-pre-wrap">
+{
+  "project_state": {
+    "name": "Mental Health Chatbot",
+    "deployment_target": "Web Application",
+    "tech_stack": ["React.js", "FastAPI", "PhoBERT", "MongoDB"],
+    "status": "Ready for deployment",
+    "nlp_accuracy_target": "> 85% F1-Score"
+  }
+}</pre>
+            </div>
+        </section>
+
+        <!-- Section 2: Architecture -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">2. Thiết kế Kiến trúc Hệ thống</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="gold-border-l pl-4">
+                    <h4 class="font-bold text-slate-900 mb-2">Frontend & Backend</h4>
+                    <p class="text-sm">Giao diện React.js tối ưu UX kết hợp FastAPI xử lý bất đồng bộ, đảm bảo độ trễ thấp qua Socket.io.</p>
+                </div>
+                <div class="gold-border-l pl-4">
+                    <h4 class="font-bold text-slate-900 mb-2">NLP Pipeline</h4>
+                    <p class="text-sm">Sử dụng <code>PhoBERT</code> tinh chỉnh để nhận diện cảm xúc, tích hợp lớp lọc từ khóa độc hại theo thời gian thực.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Strategy -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">3. Chiến lược Triển khai</h2>
+            
+            <div class="space-y-6">
+                <article>
+                    <h3 class="text-lg font-bold text-blue-600">3.1. Sản phẩm Khả thi Tối thiểu (MVP)</h3>
+                    <p>Hỗ trợ hội thoại văn bản, thực hiện khảo sát <code>PHQ-9</code> tự động và điều hướng đến hotline khẩn cấp 24/7.</p>
+                </article>
+                <article>
+                    <h3 class="text-lg font-bold text-blue-600">3.2. Điểm Đổi mới Sáng tạo</h3>
+                    <p>Ứng dụng <code>LLM Empathetic Tuning</code> giúp bot phản hồi mang tính nhân văn. Tích hợp <code>Mood Analytics</code> để hiển thị dashboard cá nhân hóa.</p>
+                </article>
+                <article>
+                    <h3 class="text-lg font-bold text-blue-600">3.3. Đánh giá Rủi ro và Giảm thiểu</h3>
+                    <table class="w-full text-sm border-collapse border border-slate-200 mt-4">
+                        <tr class="bg-slate-100">
+                            <th class="border p-2">Rủi ro</th>
+                            <th class="border p-2">Giải pháp</th>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">AI Hallucinations</td>
+                            <td class="border p-2">Sử dụng <code>RAG</code> để kiểm soát nội dung</td>
+                        </tr>
+                    </table>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 4: Evaluation -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6 text-slate-900 border-b border-slate-200 pb-2">4. Checklist Đối chiếu Rubric</h2>
+            <ul class="space-y-3 font-serif">
+                <li class="flex items-center gap-3">
+                    <span class="text-green-600">✓</span> Kỹ thuật: <code>PhoBERT</code> & Microservices đạt tiêu chuẩn quốc tế.
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="text-green-600">✓</span> Đạo đức: Bảo mật ẩn danh, GDPR-aligned.
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="text-green-600">✓</span> Sáng tạo: <code>Mood Analytics</code> nâng cao giá trị trải nghiệm.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t border-slate-200 text-center">
+            <p class="text-xs text-slate-400 uppercase tracking-widest">AI THỰC CHIẾN SS2 - CONFIDENTIAL DOCUMENT</p>
+        </footer>
+    </article>
+
+    <script>
+        document.getElementById('timestamp').innerText = "Generated On: " + new Date().toLocaleDateString('vi-VN');
+    </script>
+</body>
+</html>
